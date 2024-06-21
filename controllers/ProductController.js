@@ -1,7 +1,7 @@
 const { Product } = require('../models/product')
 
 const ProductController = {
- insert(req, res) {
+ create(req, res) {
    Product.create(req.body)
      .then((Product) => {
        book.addCategory(req.body.CategoryId)
