@@ -1,0 +1,14 @@
+const {Order } = require('../models/order')
+
+const OrderController = {
+ create(req, res) {
+   Order.create(req.body)
+     .then((Order) => {
+       Order.addProduct(req.body.ProductId)
+       res.status(201).send({ message: 'Pedido creado con éxito', Order})
+     })
+     .catch((err) => console.error(err))
+ }
+}
+
+module.exports = OrderController
