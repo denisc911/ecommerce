@@ -42,7 +42,7 @@ async update(req, res) {
       where: { id: req.params.id }
     })
     const product = await Product.findByPk(req.params.id)
-    book.setOrders(req.body.OrderId)
+    product.setOrders(req.body.OrderId)
     res.send('Producto actualizado con éxito')
   } catch (error) {
     console.error(error)
