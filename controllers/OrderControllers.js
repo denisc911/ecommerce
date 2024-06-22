@@ -1,8 +1,8 @@
-const {Order } = require('../models/order')
+const {Order} = require('../models/order')
 
 const OrderController = {
  create(req, res) {
-   Order.create(req.body)
+   Order.create({ ...req.body, UserId: req.user.id })
      .then((Order) => {
        Order.addProduct(req.body.ProductId)
        res.status(201).send({ message: 'Pedido creado con éxito', Order})
