@@ -4,7 +4,9 @@
     "password": "dc06SQL91",
     "database": "ecommerce_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "jwt_secret": "mimamamemima"
+
   },
   "test": {
     "username": "root",
