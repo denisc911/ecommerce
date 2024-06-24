@@ -4,7 +4,7 @@ const PORT = 3000
 
 app.use(express.json())
 app.use('/products', require('./routes/products'))
-app.use('/categories', require('./routes/categories'))
+app.use('/categories', require('./routes/categories.js'))
 app.use('/users', require('./routes/users'))
 
 
